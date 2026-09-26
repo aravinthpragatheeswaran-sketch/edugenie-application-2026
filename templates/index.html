@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>index.html</title>
+	<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+	<header class="hero">
+		<div>
+			<span class="eyebrow">PERSONAL LEARNING STUDIO</span>
+			<h1>EduGenie</h1>
+			<p>Turn difficult material into clear explanations, useful summaries, quizzes, and a plan you can actually follow.</p>
+		</div>
+		<span class="badge">Ready to learn</span>
+	</header>
+
+	<main class="container">
+		<section class="card">
+			<div class="form-grid">
+				<label>Mode
+					<select id="mode">
+						<option value="explain">Explain a topic</option>
+						<option value="qa">Ask a question</option>
+						<option value="summarize">Summarize text</option>
+						<option value="quiz">Create a quiz</option>
+						<option value="learn/recommendations">Build a learning path</option>
+					</select>
+				</label>
+				<label id="levelField">Level
+					<select id="level"><option>beginner</option><option>intermediate</option><option>advanced</option></select>
+				</label>
+			</div>
+			<label id="inputLabel" for="input">Your material</label>
+			<textarea id="input" rows="9" placeholder="Enter a topic, question, or study text..."></textarea>
+			<div class="extra-row">
+				<label id="countField">Quiz questions
+					<input id="count" type="number" value="5" min="1" max="10">
+				</label>
+				<label id="weeksField">Weeks
+					<input id="weeks" type="number" value="4" min="1" max="24">
+				</label>
+			</div>
+			<button id="run" type="button">Generate</button>
+			<p id="status" class="status" role="status"></p>
+		</section>
+
+		<section class="card">
+			<div class="result-header"><h2>Result</h2><button id="clear" class="secondary" type="button">Clear</button></div>
+			<div id="result" class="result empty">Your learning result will appear here.</div>
+		</section>
+	</main>
+	<script src="/static/js/app.js"></script>
+</body>
+</html>
